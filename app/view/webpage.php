@@ -8,7 +8,7 @@ if(isset($_SESSION['alert'])){
 
 ?>
 
-<form id="people" action="/save/" method="POST" name="form">
+<form id="people" action="/save" method="POST" name="form">
     <input type="hidden" name="Language" value="<?php $_token ?>">
     <table>
         <tr>

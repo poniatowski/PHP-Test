@@ -1,6 +1,8 @@
 <?php
 namespace App\Controller;
 
+use App\Model\WebPageModel;
+
 class IndexController extends BaseController
 {
     public $model;
@@ -19,6 +21,9 @@ class IndexController extends BaseController
             $this->createToken();
 
             $page = './index';
+
+            $webPage = new WebPageModel('data.ser');
+            $person = $webPage->getFile();
         }
 
         include $this->layout;

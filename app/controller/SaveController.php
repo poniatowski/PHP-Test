@@ -20,6 +20,7 @@ class SaveController extends BaseController
         {
             $fileName = 'data.ser';
             $fileObj = new FileModel($fileName);
+            
             $argString = serialize($this->inputsP);
             $fileObj->save($argString);
 
