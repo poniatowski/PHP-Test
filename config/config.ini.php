@@ -17,6 +17,8 @@ define("PRODUCTION_MODE", false);
 define("SALT", "0987654321!@#$%^&*()_+qwertyuiop[[]");
 define("DATE_NOW", date("Y-m-d"));
 define("LIB", "lib/");
+define("APP", DOCUMENT_ROOT."app/");
+define("VIEW", APP."view/");
 
 spl_autoload_register(function ($className)
 {

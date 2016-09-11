@@ -1,4 +1,4 @@
-<a href="/webpage.">Webpage</a>
+<a href="/webpage">Webpage</a>
 <?php
 
 if(isset($_SESSION['alert'])){
@@ -18,7 +18,6 @@ if(isset($_SESSION['alert'])){
         </tr>
 
         <?php
-
             $len = count($person['firstname']);
             for ($i=0; $i < $len; $i++) {
                 echo '<tr>
@@ -27,7 +26,6 @@ if(isset($_SESSION['alert'])){
                     <td><input type="text" name="jobtitle['.$i.']" id="jobtitle['.$i.']" value="'.$person['jobtitle'][$i].'" /></td>
                 </tr>';
             }
-
         ?>
 
     </table>

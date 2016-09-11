@@ -1,8 +1,6 @@
 <?php
 namespace App\Model;
 
-use App\Model\BaseModel;
-
 class FileModel extends BaseModel
 {
     public $fileName;

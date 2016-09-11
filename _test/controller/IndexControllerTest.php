@@ -1,34 +1,9 @@
 <?php
+use PHPUnit\Framework\TestCase;
 
-namespace App\Controller;
 
-abstract class BaseController
+class IndexControllerTest extends TestCase
 {
-    const SESSION_TOKEN = '_token';
-
-    public $layout;
-    public $inputsP;
-    public $inputsG;
-
-    public function __construct()
-    {
-        $this->layout  = '../app/view/_main.php';
-
-       if (isset($_GET))
-            $this->inputsG = $this->escapeSqlInject($_GET);
-        if (isset($_POST))
-            $this->inputsP = $this->escapeSqlInject($_POST);
-    }
-
-    public function post($name)
-    {
-
-    }
-
-    public function get($name)
-    {
-
-    }
 
     public function escapeSqlInject($in)
     {
@@ -55,7 +30,7 @@ abstract class BaseController
 
     public function createToken()
     {
-        return $_SESSION[self::SESSION_TOKEN] = md5(SALT . mt_rand(1,1000000) . SALT);
+        return $_SESSION[SESSION_TOKEN] = md5(SALT . mt_rand(1,1000000) . SALT);
     }
 
 
